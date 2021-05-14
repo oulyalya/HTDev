@@ -1,0 +1,92 @@
+.page-header {
+  @include vertical-line;
+  @include flex(row);
+  padding-top: 88px;
+  padding-bottom: 40px;
+  padding-left: $left_pad_desk_extra;
+  padding-right: $left_pad_desk_extra;
+  background-color: white;
+
+  @include desktop {
+    padding-left: $left_pad_desk;
+    padding-right: $left_pad_desk;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @include tablet {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.page-header__logo-wrapper {
+  width: max-content;
+}
+
+.page-header__logo-wrapper img {
+  width: 150px;
+  height: 40px;
+
+  @include desktop {
+    width: 125px;
+    height: auto;
+  }
+
+  @include tablet {
+    width: 105px;
+    height: auto;
+  }
+
+  @include mobile {
+    width: 105px;
+    height: auto;
+  }
+}
+
+.page-header__link-wrapper {
+  width: max-content;
+  margin-left: auto;
+  margin-top: 5px;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+
+  &:hover,
+  &focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.page-header__link-wrapper img {
+  width: 22px;
+  height: 22px;
+}

@@ -1,0 +1,186 @@
+.principles {
+  padding-top: 17px;
+  padding-bottom: 50px;
+
+  @include tablet {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @include mobile {
+    padding-top: 28px;
+    padding-bottom: 25px;
+  }
+}
+
+.principles h2 {
+  @include heading-1;
+  margin-bottom: 52px;
+  margin-left: $left_pad_desk_extra;
+
+  @include desktop {
+    margin-left: $left_pad_desk;
+  }
+
+  @include tablet {
+    margin-bottom: 25px;
+    margin-left: 20px;
+  }
+
+  @include mobile {
+    margin-bottom: 25px;
+    margin-left: 20px;
+  }
+}
+
+.principles__slider {
+  position: relative;
+  background-color: white;
+  margin-left: $left_pad_desk_extra;
+
+  @include desktop {
+    margin-left: $left_pad_desk;
+  }
+
+  @include tablet {
+    width: $block_mob_width;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  @include mobile {
+    width: $block_mob_width;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+.principles__slide {
+  padding-top: 25px;
+  padding-bottom: 38px;
+  padding-left: 52px;
+  padding-right: 60px;
+
+  @include desktop {
+    padding-left: $left_pad_desk;
+    padding-right: $left_pad_desk;
+  }
+
+  @include tablet {
+    padding-top: 18px;
+    padding-bottom: 55px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include mobile {
+    padding-top: 18px;
+    padding-bottom: 55px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.principles__slide-header {
+  @include flex(row);
+  align-items: center;
+  position: relative;
+  padding-bottom: 16px;
+
+  @include mobile {
+    padding-bottom: 13px;
+  }
+}
+
+.principles__slider-controls {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 20%;
+  height: 60px;
+  padding-right: $left_pad_desk_extra;
+  background-color: white;
+
+  @include desktop {
+    padding-right: $left_pad_desk;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.principles__slider-btn {
+  right: 0;
+  margin-top: 17px;
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.principles__slide-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% 10px;
+  background-image: url("../img/divider.svg");
+
+  @include mobile {
+    background-position: 0 50%;
+    background-size: 335% 10px;
+  }
+}
+
+.principles__slide h3 {
+  max-width: 80%;
+  font-weight: $reg;
+  margin-bottom: 0;
+
+  @include tablet {
+    max-width: none;
+  }
+
+  @include mobile {
+    max-width: none;
+  }
+}
+
+.principles__slide-content {
+  padding-top: 20px;
+
+  @include mobile {
+    padding-top: 10px;
+  }
+}
+
+.principles__slide-content p {
+  @include mobile {
+    margin-bottom: 0;
+  }
+}
+
+.principles .principles__slider-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}

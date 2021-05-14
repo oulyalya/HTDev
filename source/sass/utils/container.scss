@@ -1,0 +1,4 @@
+.container {
+  @include container;
+  background-color: $c_bg;
+}

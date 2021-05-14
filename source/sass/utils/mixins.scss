@@ -1,0 +1,247 @@
+@mixin desktop {
+  @media (min-width: $desk_min) and (max-width: $desk_max) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tab_min) and (max-width: $tab_max) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: 0) and (max-width: $mob_max) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina_dpi), (min-resolution: $retina_dppx) {
+    @content;
+  }
+}
+
+@mixin flex($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}
+
+@mixin container {
+  position: relative;
+  width: $desk_extra_container;
+  margin: 0 auto;
+
+  @include desktop {
+    width: $desk_container;
+  }
+
+  @include tablet {
+    width: $tab_container;
+    overflow-x: hidden;
+  }
+
+  @include mobile {
+    width: calc(100% - (2 * #{$mob_pads}));
+    min-width: $mob_min_container;
+    margin: 0 $mob_pads;
+    overflow-x: hidden;
+  }
+}
+
+@mixin font($size, $height, $weight) {
+  font-family: $font_main;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin heading-1 {
+  @include font(32px, 1.18, $bold);
+  color: $c_accent;
+
+  @include tablet {
+    padding-right: 20px;
+    font-size: 24px;
+  }
+
+  @include mobile {
+    padding-right: 20px;
+    font-size: 24px;
+  }
+}
+
+@mixin text-wrapper {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  padding-right: 30px;
+  background-color: white;
+
+  @include tablet {
+    position: relative;
+    padding-top: 14px;
+    padding-bottom: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include mobile {
+    position: relative;
+    padding-top: 14px;
+    padding-bottom: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@mixin text-wrapper-left {
+  @include text-wrapper;
+  left: 0;
+  padding-left: $left_pad_desk_extra;
+
+  @include desktop {
+    padding-left: $left_pad_desk;
+  }
+}
+
+@mixin text-wrapper-right {
+  @include text-wrapper;
+  right: 0;
+  padding-left: 40px;
+
+  @include tablet {
+    margin-left: auto;
+  }
+
+  @include mobile {
+    margin-left: auto;
+  }
+}
+
+
+@mixin vertical-line {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(#{$left_gap} - 32px);
+    display: block;
+    height: 100%;
+    width: 1px;
+    background-color: $c_lines;
+
+    @include desktop {
+      left: calc(#{$left_gap_desk} - 20px);
+    }
+
+    @include tablet {
+      left: 18px;
+    }
+
+    @include mobile {
+      left: 2.8vw;
+    }
+  }
+}
+
+@mixin horizontal-line-top-left {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 1px;
+    width: calc(#{$left_gap} - 31px);
+    background-color: $c_lines;
+
+    @include desktop {
+      width: calc(#{$left_gap_desk} - 20px);
+    }
+
+    @include tablet {
+      width: 19px;
+    }
+
+    @include mobile {
+      width: calc(2.8vw + 1px);
+    }
+  }
+}
+
+@mixin horizontal-line-bottom-left {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    height: 1px;
+    width: calc(#{$left_gap} - 31px);
+    background-color: $c_lines;
+
+    @include desktop {
+      width: calc(#{$left_gap_desk} - 19px);
+    }
+
+    @include tablet {
+      width: 18px;
+    }
+
+    @include mobile {
+      width: calc(2.8vw + 1px);
+    }
+  }
+}
+
+@mixin horizontal-line-bottom-right {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(#{$left_gap} - 32px);
+    display: block;
+    height: 1px;
+    width: calc((100% - #{$left_gap}) + 32px);
+    background-color: $c_lines;
+
+    @include desktop {
+      left: calc(#{$left_gap_desk} - 19px);
+      width: calc((100% - calc(#{$left_gap_desk}) + 19px));
+    }
+
+    @include tablet {
+      left: 18px;
+      width: calc(100% + 17px);
+    }
+
+    @include mobile {
+      left: 2.8vw;
+      width: calc(100% + 2.8vw);
+    }
+  }
+}

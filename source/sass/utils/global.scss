@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  scroll-behavior: inherit;
+}
+
+*:focus {
+  outline-style: groove;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+
+  padding-bottom: 50px; // для демонстрации
+
+  @include font(16px, 1.5, $reg);
+  letter-spacing: normal;
+  color: $c_text;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

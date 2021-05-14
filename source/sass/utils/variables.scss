@@ -1,0 +1,36 @@
+$font_main: "Arial", sans-serif;
+$reg: 400;
+$bold: 700;
+
+$mob_min: 330px;
+$mob_max: 699px;
+$tab_min: 700px;
+$tab_max: 1019px;
+$desk_min: 1020px;
+$desk_max: 1339px;
+$desk_extra: 1340px;
+
+$mob_min_container: 300px;
+$tab_container: 610px;
+$desk_container: 930px;
+$desk_extra_container: 1250px;
+
+$mob_pads: 15px;
+$tab_pads: 25px;
+$desk_pads: 35px;
+$desk_extra_pads: 50px;
+
+$left_pad_desk_extra: 60px; // маленький отступ слева (до текста)
+$left_pad_desk: 40px;
+$left_gap: 330px; // большой отступ слева
+$left_gap_desk: 200px;
+
+$retina_dpi: 144dpi;
+$retina_dppx: 1.5dppx;
+
+$c_bg: #f5f0f0;
+$c_text: #1e1e1e;
+$c_accent: #4764b0;
+$c_lines: #d2c8c8;
+
+$block_mob_width: 93.5%;

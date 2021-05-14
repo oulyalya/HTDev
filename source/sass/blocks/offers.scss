@@ -1,0 +1,165 @@
+.offers {
+  @include vertical-line;
+  @include horizontal-line-top-left;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 0;
+  overflow-x: hidden;
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+
+  @include tablet {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+
+  @include mobile {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+.offers h2 {
+  @include heading-1;
+  margin-left: $left_gap;
+
+  @include desktop {
+    margin-left: $left_gap_desk;
+  }
+
+  @include tablet {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+
+  @include mobile {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+}
+
+.offers__slider-wrapper {
+  position: relative;
+}
+
+.offers__slider {
+  position: relative;
+  margin-top: 52px;
+  padding-top: 52px;
+  padding-bottom: 110px;
+
+  @include desktop {
+    position: absolute;
+    padding-top: 0;
+    padding-bottom: 150px;
+  }
+
+  @include tablet {
+    margin-top: 27px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include mobile {
+    margin-top: 27px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.offers__slider-img-wrapper {
+  width: max-content;
+
+  @include tablet {
+    position: relative;
+    width: $block_mob_width;
+  }
+
+  @include mobile {
+    width: $block_mob_width;
+  }
+}
+
+.offers__slider-img-wrapper img {
+  width: 800px;
+  height: 578px;
+
+  @include desktop {
+    width: 500px;
+    height: auto;
+  }
+
+  @include tablet {
+    width: 100%;
+    height: auto;
+  }
+
+  @include mobile {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.offers__slider-text-wrapper {
+  @include text-wrapper-right;
+  right: 0;
+  top: 2px;
+  width: 470px;
+  padding-top: 45px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @include desktop {
+    position: relative;
+    margin-left: auto;
+  }
+
+  @include tablet {
+    position: relative;
+    top: -40px;
+    width: $block_mob_width;
+    padding-top: 28px;
+    padding-left: 20px;
+  }
+
+  @include mobile {
+    position: relative;
+    top: -40px;
+    width: $block_mob_width;
+    padding-top: 28px;
+    padding-left: 20px;
+  }
+}
+
+.offers__slider-btn {
+  margin-top: 160px;
+  margin-left: $left_pad_desk_extra;
+
+  @include desktop {
+    position: absolute;
+    z-index: 300;
+    bottom: 40px;
+    margin-left: $left_pad_desk;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.offers__slider-pagination {
+  position: absolute;
+  bottom: 48px;
+  left: 0;
+  width: $block_mob_width;
+  padding: 0;
+}

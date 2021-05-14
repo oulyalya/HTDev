@@ -1,0 +1,26 @@
+.slider-btn {
+  position: relative;
+  z-index: 100;
+  width: 20px;
+  height: 20px;
+  border: 0 none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  background-image: url("../img/arrows.svg");
+  background-color: transparent;
+  cursor: pointer;
+  outline: 0 none;
+  transition: 0.3 all ease-in;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    outline: 0 none;
+  }
+
+  &:active {
+    opacity: 0.5;
+    outline: 0 none;
+  }
+}

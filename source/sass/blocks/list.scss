@@ -1,0 +1,42 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  position: relative;
+  padding-left: 27px;
+  margin-bottom: 11px;
+
+  @include tablet {
+    margin-bottom: 9px;
+    padding-left: 18px;
+  }
+
+  @include mobile {
+    margin-bottom: 9px;
+    padding-left: 18px;
+  }
+}
+
+.list li::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  display: block;
+  width: 18px;
+  height: 1px;
+  background-color: currentColor;
+
+  @include tablet {
+    top: 10px;
+    width: 12px;
+  }
+
+  @include mobile {
+    top: 10px;
+    width: 12px;
+  }
+}

@@ -1,0 +1,266 @@
+.now {
+  padding-top: 10px;
+
+  @include tablet {
+    padding-top: 13px;
+  }
+
+  @include mobile {
+    padding-top: 13px;
+  }
+}
+
+.now h2 {
+  @include heading-1;
+  margin-left: $left_pad_desk_extra;
+  margin-bottom: 5px;
+
+  @include desktop {
+    margin-left: $left_pad_desk;
+  }
+
+  @include tablet {
+    margin-left: 20px;
+  }
+
+  @include mobile {
+    margin-left: 20px;
+  }
+}
+
+.now__stats {
+  @include horizontal-line-bottom-left;
+  position: relative;
+
+  @include flex(row);
+  padding-bottom: 38px;
+  padding-left: $left_pad_desk_extra;
+  padding-right: $left_pad_desk_extra;
+
+  @include desktop {
+    padding-left: $left_pad_desk;
+    padding-right: $left_pad_desk;
+  }
+
+  @include tablet {
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include mobile {
+    justify-content: flex-start;
+    padding-bottom: 4px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.now__stats > p {
+  width: 500px;
+  margin-right: 80px;
+
+  font-weight: $reg;
+
+  @include tablet {
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  @include mobile {
+    width: calc(100% - 100px - 20px - 20px);
+    margin-right: 20px;
+  }
+
+  @media (min-width: 350px) and (max-width: $mob_max) {
+    width: 100%;
+  }
+}
+
+.now__stats-list {
+  @include flex(row);
+  /** ширина блока 100% - абзац с текстом - отступ слева*/
+  width: calc(100% - 500px - 80px);
+  font-weight: $reg;
+
+  @include tablet {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    width: 100px;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: 350px) and (max-width: $mob_max) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.now__stats-list > div {
+  @include flex(column);
+
+  @include desktop {
+    margin-bottom: 40px;
+  }
+
+  @include tablet {
+    width: 46%;
+    margin-bottom: 12px;
+    margin-right: 20px;
+  }
+
+  @include mobile {
+    width: 90px;
+    margin-bottom: 12px;
+    margin-right: 20px;
+  }
+
+  @media (min-width: 350px) and (max-width: $mob_max) {
+    width: 45%;
+    margin: 0;
+  }
+}
+
+.now__stats-list dt {
+  order: 2;
+}
+
+.now__stats-list dd {
+  order: 1;
+  margin-left: 0;
+  text-transform: uppercase;
+
+  @include tablet {
+    line-height: 1.6;
+  }
+
+  @include mobile {
+    line-height: 1.6;
+  }
+}
+
+.now__stats-list span {
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 50px;
+  line-height: 0.7;
+  font-weight: $bold;
+
+  @include tablet {
+    margin-bottom: 7px;
+    line-height: 0.8;
+    font-size: 36px;
+  }
+
+  @include mobile {
+    margin-bottom: 7px;
+    line-height: 0.8;
+    font-size: 36px;
+  }
+}
+
+.now__info {
+  @include vertical-line;
+  @include horizontal-line-bottom-right;
+  position: relative;
+  padding-bottom: 55px;
+
+  @include desktop {
+    padding-bottom: 100px;
+  }
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    padding-top: 19px;
+    padding-bottom: 30px;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding-top: 19px;
+    padding-bottom: 30px;
+  }
+}
+
+.now__info-img-wrapper {
+  margin-left: $left_gap;
+
+  @include desktop {
+    margin-left: $left_gap_desk;
+  }
+
+  @include tablet {
+    order: 2;
+    position: relative;
+    top: -30px;
+    right: 0;
+    width: 100%;
+    margin-bottom: -40px;
+    margin-left: auto;
+  }
+
+  @include mobile {
+    order: 2;
+    position: relative;
+    top: -30px;
+    right: 0;
+    width: 100%;
+    margin-bottom: -40px;
+    margin-left: auto;
+  }
+}
+
+.now__info-img-wrapper img {
+  width: 920px;
+  height: auto;
+
+  @include desktop {
+    width: 730px;
+  }
+
+  @include tablet {
+    width: $block_mob_width;
+    margin-left: auto;
+  }
+
+  @include mobile {
+    width: $block_mob_width;
+    margin-left: auto;
+  }
+}
+
+.now__info-text-wrapper {
+  @include text-wrapper-left;
+  top: 35px;
+  width: 470px;
+  padding-top: 63px;
+  padding-bottom: 50px;
+
+  @include tablet {
+    position: relative;
+    top: 0;
+    width: $block_mob_width;
+    margin-top: 0;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+  }
+
+  @include mobile {
+    position: relative;
+    top: 0;
+    width: $block_mob_width;
+    margin-top: 0;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+  }
+}

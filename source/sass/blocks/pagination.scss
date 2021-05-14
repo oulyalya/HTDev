@@ -1,0 +1,56 @@
+.pagination {
+  position: relative;
+  z-index: 200;
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+
+  @include mobile {
+    display: block;
+  }
+}
+
+.pagination ul {
+  @include flex(row);
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+}
+
+.pagination li > div {
+  display: block;
+  width: 7px;
+  height: 7px;
+  margin: auto;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.pagination--dark li > div {
+  border: 1px solid $c_accent;
+  background-color: $c_accent;
+}
+
+.pagination--light li > div {
+  width: 6px;
+  height: 6px;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.pagination .pagination__item--current > div {
+  width: 10px;
+  height: 10px;
+}
